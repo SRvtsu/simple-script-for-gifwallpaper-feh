@@ -9,7 +9,7 @@
 DELAY="sleep 0.010"
 
 #PATH OF THE FRAMES
-PATHFRAME="${HOME}/wallpapergif/"
+PATHFRAME="${HOME}/wallpapergif"
 
 #FRAME FORMAT
 FORMAT="jpg"
