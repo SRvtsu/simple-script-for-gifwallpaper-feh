@@ -4,7 +4,7 @@
 # Simple script for animated wallpaper in feh.
 # Creator: Rvtsv
 #================================================#
-
+val="1"
 
 #DELAY 
 DELAY="sleep 0.010"
@@ -22,6 +22,7 @@ totalframes="16"
 BG="--bg-center"
 
 type feh || { echo "You need feh!" ; exit 1 ; }
+f="feh ${BG} ${PATHFRAME}"
 
 while [ "$val" -ne "$totalframes" ]; do	
 	${f}/${val}.${FORMAT}
