@@ -5,6 +5,7 @@
 # Creator: Rvtsv
 #================================================#
 
+
 #DELAY 
 DELAY="sleep 0.010"
 
@@ -14,44 +15,19 @@ PATHFRAME="${HOME}/wallpapergif"
 #FRAME FORMAT
 FORMAT="jpg"
 
+#THE QUANTITY OF FRAMES YOU'LL USE 
+totalframes="16"
+
 #BACKGROUND (OPTIONS: center, max, scale, fill, tile )
 BG="--bg-center"
 
 type feh || { echo "You need feh!" ; exit 1 ; }
 
-f="feh ${BG} ${PATHFRAME}"
-#LOOP (CREATE MORE OR REMOVE IF YOUR GIF HAS MORE OR LESS FRAMES)
-while : ; do	
-	${f}/1.${FORMAT}
-	${DELAY}
-	${f}/2.${FORMAT}
-	${DELAY}
-	${f}/3.${FORMAT}
-	${DELAY}
-	${f}/4.${FORMAT}
-	${DELAY}
-	${f}/5.${FORMAT}
-	${DELAY}
-	${f}/6.${FORMAT}
-	${DELAY}
-	${f}/7.${FORMAT}
-	${DELAY}
-	${f}/8.${FORMAT}
-	${DELAY}
-	${f}/9.${FORMAT}
-	${DELAY}
-	${f}/10.${FORMAT}
-	${DELAY}
-	${f}/11.${FORMAT}
-	${DELAY}
-	${f}/12.${FORMAT}
-	${DELAY}
-	${f}/13.${FORMAT}
-	${DELAY}
-	${f}/14.${FORMAT}
-	${DELAY}
-	${f}/15.${FORMAT}
-	${DELAY}
-	${f}/16.${FORMAT}
+while [ "$val" -ne "$totalframes" ]; do	
+	${f}/${val}.${FORMAT}
+	val=$(($val+1))
+	if [ "$val" = "$totalframes" ]; then
+		val=1
+	fi
 	${DELAY}
 done
