@@ -22,7 +22,7 @@ totalframes="16"
 BG="--bg-center"
 
 type feh || { echo "You need feh!" ; exit 1 ; }
-f="feh ${BG} ${PATHFRAME}"
+f="feh --no-fehbg ${BG} ${PATHFRAME}"
 
 while [ "$val" -ne "$totalframes" ]; do	
 	${f}/${val}.${FORMAT}
